@@ -168,7 +168,7 @@ def graphIt(graph,route,mapName):
     plt.title(mapName)
 
 
-def output(map,start,end,mapName):
+def output(map,start,end,mapName,mapvar):
     '''this function uses all the above functions and returns the desired path and graph. We take 4 arguments in this function,i.e. 
     map: the place where we search for routes
     start: starting point of the route
@@ -191,19 +191,22 @@ def output(map,start,end,mapName):
     plt.scatter(-0.025,0.017,c="red",alpha=0.5,s=2000**2)#plotting the red background.
     graphIt(map.graph,Route,mapName)#plotting the weighted graph using networkx and matplotlib.
     plt.figure(2)
-    plt.imshow(mpimg.imread('map_iitrpr.png'))
+    plt.imshow(mapvar)
     plt.show()
 
 
 
-
+main_iitrpr = mpimg.imread('map_iitrpr.png')
+transit_iitrpr = mpimg.imread('map_transit_iitrpr.png')
 map_input = input("where do you want to go IIT(main/transit) campus : ")#choice between main campus or transit campus
 if map_input == "main campus": 
     map = map_iitrpr
     mapName = "IIT Ropar Main Campus | map is not to scale"#this is basically the title of the matplotlib window.
+    mapvar = main_iitrpr
 else:
     map = map_transit_iitrpr
     mapName = "IIT Ropar Transit Campus | map is not scale"
+    mapvar = transit_iitrpr
 
 start_input = input("what is the starting point of your journey : ")#input for the starting point.
 end_input = input("what is your destination : ")#input for end point.
@@ -212,5 +215,5 @@ print("\nlets find out the shortest route for your journey\n......  ")
 
 
 
-output(map,start_input,end_input,mapName)#executing the combing function on the given input.
+output(map,start_input,end_input,mapName,mapvar)#executing the combing function on the given input.
 # output(map_iitrpr,"mess","chenab","IIT Ropar Main Campus | map is not to scale")#executing the combing function on the given input.
