@@ -18,6 +18,9 @@ application.
     git clone https://github.com/Arpit078/GE103-Project.git
     cd GE103-project
     python3 ge103project.py
+### Screen Shots:
+![screen shot of graph](assets/graph.png)
+![screen shot of map](assets/map.png)
 
 ### Contributers:
 1. [Akshit Pal](https://github.com/AkshPal)

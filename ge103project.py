@@ -196,8 +196,8 @@ def output(map,start,end,mapName,mapvar):
 
 
 
-main_iitrpr = mpimg.imread('map_iitrpr.png')
-transit_iitrpr = mpimg.imread('map_transit_iitrpr.png')
+main_iitrpr = mpimg.imread('assets/map_iitrpr.png')
+transit_iitrpr = mpimg.imread('assets/map_transit_iitrpr.png')
 map_input = input("where do you want to go IIT(main/transit) campus : ")#choice between main campus or transit campus
 if map_input == "main campus": 
     map = map_iitrpr
