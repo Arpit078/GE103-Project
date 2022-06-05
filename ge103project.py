@@ -197,20 +197,20 @@ def output(map,start,end,mapName):
 
 
 
-# map_input = input("where do you want to go IIT(main/transit) campus : ")#choice between main campus or transit campus
-# if map_input == "main campus": 
-#     map = map_iitrpr
-#     mapName = "IIT Ropar Main Campus | map is not to scale"#this is basically the title of the matplotlib window.
-# else:
-#     map = map_transit_iitrpr
-#     mapName = "IIT Ropar Transit Campus | map is not scale"
+map_input = input("where do you want to go IIT(main/transit) campus : ")#choice between main campus or transit campus
+if map_input == "main campus": 
+    map = map_iitrpr
+    mapName = "IIT Ropar Main Campus | map is not to scale"#this is basically the title of the matplotlib window.
+else:
+    map = map_transit_iitrpr
+    mapName = "IIT Ropar Transit Campus | map is not scale"
 
-# start_input = input("what is the starting point of your journey : ")#input for the starting point.
-# end_input = input("what is your destination : ")#input for end point.
-# print("\nlets find out the shortest route for your journey\n......  ")
-
-
+start_input = input("what is the starting point of your journey : ")#input for the starting point.
+end_input = input("what is your destination : ")#input for end point.
+print("\nlets find out the shortest route for your journey\n......  ")
 
 
-# output(map,start_input,end_input,mapName)#executing the combing function on the given input.
-output(map_iitrpr,"mess","chenab","IIT Ropar Main Campus | map is not to scale")#executing the combing function on the given input.
+
+
+output(map,start_input,end_input,mapName)#executing the combing function on the given input.
+# output(map_iitrpr,"mess","chenab","IIT Ropar Main Campus | map is not to scale")#executing the combing function on the given input.
